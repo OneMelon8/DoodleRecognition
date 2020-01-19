@@ -23,6 +23,9 @@ LOAD_FROM_CACHE = False
 SAVE_TO_CACHE = False
 # Option: save trained neural network data
 SAVE_NEURAL_NETWORK = False
+# Option: skip the training of the neural network (debugging)
+SKIP_TRAINING = True
+
 
 # Code starts
 if not LOAD_FROM_CACHE:
@@ -98,9 +101,12 @@ else:
 # Log the model summary
 print(model.summary())
 
-# Train the neural network for x epochs
-print("Training the neural network...")
-# model.fit(train_x, train_y, epochs=EPOCHS)
+if not SKIP_TRAINING:
+    # Train the neural network for x epochs
+    print("Training the neural network...")
+    model.fit(train_x, train_y, epochs=EPOCHS)
+else:
+    print("Training process skipped...")
 
 if SAVE_NEURAL_NETWORK:
     # Save model
