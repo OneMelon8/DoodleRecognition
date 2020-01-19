@@ -1,0 +1,3 @@
+# Importing the Datasets
+
+This neural network is trained using the data from Google's [**Quick, Draw!**]([https://github.com/googlecreativelab/quickdraw-dataset](https://github.com/googlecreativelab/quickdraw-dataset)) minigame. Due to Github limitations, the complete set of data could not be uploaded, please navigate to Google's database to download them. The datasets that are used in this project are: *apple, banana, broccoli, carrot, grapes, mushroom, pineapple, strawberry, and watermelon*. These should be downloaded in **.npy** format.
